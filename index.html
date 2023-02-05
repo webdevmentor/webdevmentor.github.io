@@ -34,6 +34,16 @@
                 max-width: 1280px;
             }
         }
+        .cards {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        .cards .card {
+            flex-basis: 50%;
+        }
+        .cards .card picture { display: none }
     </style>
 </head>
 <body>
@@ -48,8 +58,33 @@
                 Mentoring für Hobby und Nachwuchs Entwickler für Internetseiten und Internetanwendungen. Tritt unserem <a href="https://webdevelopermentoring.slack.com" rel="nofollow">Slack workspace</a> bei
             </p>
         </section>
-        <section>
-
+        <section class="cards">
+            <div class="card">
+                <picture>
+                    <source srcset="https://static.webdevmentor.info/images/github_logo_big.png" media="(max-width: 640px)">
+                    <source srcset="https://static.webdevmentor.info/images/github_logo_small.png">
+                    <img src="https://static.webdevmentor.info/images/github_logo_small.png" alt="Logo für GitHub">
+                </picture>
+                <h3>
+                    WebDevMentor on GitHub
+                </h3>
+                <p>
+                    Meine Katas und Beispiel Code findest du hier.
+                </p>
+            </div>
+            <div class="card">
+                <picture>
+                    <source srcset="https://static.webdevmentor.info/images/buymeacoffee_logo_big.png" media="(max-width: 640px)">
+                    <source srcset="https://static.webdevmentor.info/images/buymeacoffee_logo_small.png">
+                    <img src="https://static.webdevmentor.info/images/buymeacoffee_logo_small.png" alt="Logo für BuyMeACoffee">
+                </picture>
+                <h3>
+                    Unterstütze WebDevMentor
+                </h3>
+                <p>
+                    Unterstütze mich dabei Trainingsresourcen für Hilfe suchende Entwickler wie dich bereitzustellen.
+                </p>
+            </div>
         </section>
     </main>
     <footer>
