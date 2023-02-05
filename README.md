@@ -1,6 +1,6 @@
 # Webdevmentor Website
 
-That's our website. The place where I inform about what I can do for developers and how to reach me for personal support.
+That's my website. The place where I inform about what I can do for developers and how to reach me for personal support.
 
 https://webdevmentor.github.io
 
