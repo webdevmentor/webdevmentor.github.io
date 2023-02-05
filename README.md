@@ -2,11 +2,11 @@
 
 That's my website. The place where I inform about what I can do for developers and how to reach me for personal support.
 
-https://webdevmentor.github.io
+https://www.webdevmentor.info
 
 ## Sponsoring
 
-If you find my service helpful in any way, and you want to say thank you, you can always buy me [a coffee](https://buymeacoffee.com/teachmephp).
+If you find my service helpful in any way, and you want to say thank you, you can always [buy me a coffee](https://buymeacoffee.com/teachmephp).
 
 ## Contributing
 
