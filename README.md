@@ -11,3 +11,7 @@ If you find my service helpful in any way, and you want to say thank you, you ca
 ## Contributing
 
 If you find any spelling errors, feel free to fork the repo and open a PR with your fix.
+
+## License
+
+This software is released under [MIT License](LICENSE.md).
