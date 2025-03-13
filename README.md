@@ -6,7 +6,7 @@ https://www.webdevmentor.info
 
 ## Sponsoring
 
-If you find my service helpful in any way, and you want to say thank you, you can always [buy me a coffee](https://buymeacoffee.com/teachmephp).
+If you find my service helpful in any way, and you want to say thank you, you can always [buy me a coffee](https://paypal.me/steffengrahl).
 
 ## Contributing
 
