@@ -1,0 +1,4 @@
+baseURL = 'https://www.webdevmentor.info/'
+languageCode = 'de-de'
+title = 'WebDevMentor'
+theme = 'ananke'
