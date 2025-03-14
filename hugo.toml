@@ -4,3 +4,4 @@ title = 'WebDevMentor'
 theme = 'ananke'
 [sitemap]
     changeFreq = 'monthly'
+enableRobotsTXT = false
