@@ -5,3 +5,7 @@ theme = 'ananke'
 [sitemap]
     changeFreq = 'monthly'
 enableRobotsTXT = false
+[params]
+    custom_css = ["https://static.webdevmentor.info/css/custom.css"]
+[markup.goldmark.renderer]
+    unsafe = true
