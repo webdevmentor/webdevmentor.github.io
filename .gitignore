@@ -1,2 +1,11 @@
 .idea
 .DS_Store
+
+# Hugo output folder
+/public/
+
+# Hugo asset cache
+/resources/_gen/
+
+# Optional: lokale Server/Cache-Dateien
+hugo_stats.json
