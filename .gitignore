@@ -9,4 +9,5 @@
 /resources/_gen/
 
 # Optional: lokale Server/Cache-Dateien
+.hugo_build.lock
 hugo_stats.json
