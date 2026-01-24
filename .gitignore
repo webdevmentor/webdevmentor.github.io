@@ -2,7 +2,8 @@
 .DS_Store
 
 # Hugo output folder
-/public/
+/public/*
+!/public/.gitkeep
 
 # Hugo asset cache
 /resources/_gen/
