@@ -4,37 +4,44 @@ title = "Mentoring"
 description = "Persönliches Online-Mentoring für Softwareentwickler – individuell, praxisnah und 100 % remote."
 menu = "main"
 weight = 20
+omit_header_text = false
 +++
 
-## Mentoring-Angebote
+<div class="mentoring-intro">
 
 Ich biete persönliches **1-on-1 Online-Mentoring** für Nachwuchs- und Amateur-Softwareentwickler an.  
 Der Fokus liegt auf Praxis, Verständlichkeit und deinen konkreten Fragen – nicht auf Theorie von der Stange.
 
 Alle Angebote finden **ausschließlich online** statt.
 
----
+</div>
 
-## Aktuelle Mentoring-Angebote
+<section class="mentoring-section">
 
-### 1-on-1 PHP-Mentoring
+## 1-on-1 PHP-Mentoring
 Individuelles Mentoring für PHP-Einsteiger und Fortgeschrittene, die sicherer und strukturierter programmieren wollen.
 
-[Mehr erfahren](/mentoring/1on1/)
+<a href="/mentoring/1on1/" class="mentoring-button">Details zum Mentoring</a>
 
----
+</section>
 
-### PHP Code-Review & Feedback
+<section class="mentoring-section even">
+
+## PHP Code-Review & Feedback
 Gemeinsame Analyse deines bestehenden Codes mit konkreten Verbesserungsvorschlägen.
 
-[Mehr erfahren](/mentoring/code-review/)
+<!-- <a href="/mentoring/code-review/" class="mentoring-button">So funktioniert das Review</a> -->
 
----
+</section>
 
-### Einstieg & Orientierung
+<section class="mentoring-section">
+
+## Einstieg & Orientierung
 Für Entwickler, die den roten Faden suchen: Lernpfad, Ziele, nächste sinnvolle Schritte.
 
-[Mehr erfahren](/mentoring/career/)
+<!-- <a href="/mentoring/career/" class="mentoring-button">Mehr zur Orientierung</a> -->
+
+</section>
 
 [//]: # (---)
 

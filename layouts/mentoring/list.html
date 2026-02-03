@@ -6,38 +6,12 @@
 {{ define "main" }}
   {{ $page := .}}
   {{ $section := .Site.GetPage "section" .Section }}
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked ttu">
-          {{/*
-          CurrentSection allows us to use the section title instead of inferring from the folder.
-          https://gohugo.io/variables/page/#section-variables-and-methods
-          */}}
-        {{ .CurrentSection.Title }}
-      </aside>
+  <article class="mw8 center ph3">
+    <header class="mt4 w-100 tc">
       {{- partialCached "social/share.html" . . -}}
       <h1 class="f1 athelas mt3 mb1">
         {{- .Title -}}
       </h1>
-      {{ with .Params.author | default .Site.Params.author }}
-      <p class="tracked">
-        {{- if eq $page.Language "de" "en" "es" "fr" "it" "no" "pt" -}}
-          {{- i18n "by" -}}
-        {{ end -}} <strong>
-        {{- if reflect.IsSlice . -}}
-            {{ delimit . ", " | markdownify }}
-        {{- else -}}
-            {{ . | markdownify }}
-        {{- end -}}
-        </strong>
-      </p>
-      {{ end }}
-      {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
-      {{ if not .Date.IsZero }}
-      <time class="f6 mv4 dib tracked" {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
-        {{- .Date | time.Format (default "January 2, 2006" .Site.Params.date_format) -}}
-      </time>
-      {{end}}
 
       {{/*
           Show "reading time" and "word count" but only if one of the following are true:
@@ -50,10 +24,11 @@
         <span class="f6 mv4 dib tracked"> - {{ i18n "wordCount" .WordCount }} </span>
       {{ end }}
     </header>
-    <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | default "serif"}} f4 nested-links {{ $.Param "text_color" | default "mid-gray" }} {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl4-l" "pr4-l" }} w-two-thirds-l">
+    <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | default "serif"}} f4 nested-links {{ $.Param "text_color" | default "mid-gray" }} w-100">
       {{- .Content -}}
       {{- partial "tags.html" . -}}
-      <div class="mt6 instapaper_ignoref">
+      {{ if or .Site.Config.Services.Disqus.Shortname .Site.Params.commentoEnable }}
+      <div class="instapaper_ignoref">
       {{ if .Site.Config.Services.Disqus.Shortname }}
         {{ template "_internal/disqus.html" . }}
       {{ end }}
@@ -61,11 +36,17 @@
         {{- partial "commento.html" . -}}
       {{ end }}
       </div>
+      {{ end }}
     </div>
 
-    <aside class="w-30-l mt6-l">
-      {{- partial "menu-contextual.html" . -}}
-    </aside>
+      <footer class="mw8 center ph3">
+          {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
+          {{ if not .Date.IsZero }}
+              <time class="f6 mv4 dib tracked" {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
+                  {{- .Date | time.Format (default "January 2, 2006" .Site.Params.date_format) -}}
+              </time>
+          {{end}}
+      </footer>
 
   </article>
 {{ end }}
