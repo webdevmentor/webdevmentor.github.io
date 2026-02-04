@@ -43,7 +43,6 @@ Für Entwickler, die den roten Faden suchen: Lernpfad, Ziele, nächste sinnvolle
 
 </section>
 
-[//]: # (---)
 
 [//]: # ()
 [//]: # (## Unsicher, welches Angebot passt?)
