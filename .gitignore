@@ -11,3 +11,7 @@
 # Optional: lokale Server/Cache-Dateien
 .hugo_build.lock
 hugo_stats.json
+
+# Lokale Assets (werden extern verwaltet)
+static/css/
+static/fonts/

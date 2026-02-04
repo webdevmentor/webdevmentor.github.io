@@ -52,11 +52,20 @@
       {{ end }}
     </div>
 
-      <footer class="mw8 center ph3">
+      <footer class="mw8 center ph3 mt5 tc">
+          <nav class="mentoring-footer-nav mb4">
+              <ul class="list ph0 mh0 flex flex-wrap justify-center">
+                  <li class="mh3"><a href="/mentoring/" class="link wdm-primary f5 fw6">Mentoring Übersicht</a></li>
+                  <li class="mh3"><a href="/mentoring/1on1/" class="link wdm-primary f5 fw6">1-on-1 PHP-Mentoring</a></li>
+                  <li class="mh3"><a href="/mentoring/code-review/" class="link wdm-primary f5 fw6">PHP Code-Review</a></li>
+                  {{/* <li class="mh3"><a href="/mentoring/career/" class="link dim wdm-primary f5 fw6">Einstieg & Orientierung</a></li> */}}
+              </ul>
+          </nav>
+
           {{/* Hugo uses Go's date formatting is set by example. Here are two formats */}}
           {{ if not .Date.IsZero }}
               <time class="f6 mv4 dib tracked" {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
-                  {{- .Date | time.Format (default "January 2, 2006" .Site.Params.date_format) -}}
+                  Zuletzt aktualisiert: {{- .Date | time.Format (default "January 2, 2006" .Site.Params.date_format) -}}
               </time>
           {{end}}
       </footer>

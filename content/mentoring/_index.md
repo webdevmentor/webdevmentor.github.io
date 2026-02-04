@@ -30,7 +30,7 @@ Individuelles Mentoring für PHP-Einsteiger und Fortgeschrittene, die sicherer u
 ## PHP Code-Review & Feedback
 Gemeinsame Analyse deines bestehenden Codes mit konkreten Verbesserungsvorschlägen.
 
-<!-- <a href="/mentoring/code-review/" class="mentoring-button">So funktioniert das Review</a> -->
+<a href="/mentoring/code-review/" class="mentoring-button">So funktioniert das Review</a>
 
 </section>
 
@@ -43,7 +43,6 @@ Für Entwickler, die den roten Faden suchen: Lernpfad, Ziele, nächste sinnvolle
 
 </section>
 
-[//]: # (---)
 
 [//]: # ()
 [//]: # (## Unsicher, welches Angebot passt?)
