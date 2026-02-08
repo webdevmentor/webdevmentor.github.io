@@ -1,0 +1,6 @@
+markup:
+  highlight:
+    guessSyntax: true
+    lineNos: false
+    style: dracula
+    noClasses: false
