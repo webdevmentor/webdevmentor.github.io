@@ -5,6 +5,13 @@ theme = 'ananke'
 [sitemap]
     changeFreq = 'monthly'
 enableRobotsTXT = false
-[params]
+disableKinds = ["rss"]
+[outputs]
+    home = ["HTML", "RSS"]
+    section = ["HTML"]
+    taxonomy = []
+    term = []
+    page = ["HTML"]
+    rss = []
 [markup.goldmark.renderer]
     unsafe = true
