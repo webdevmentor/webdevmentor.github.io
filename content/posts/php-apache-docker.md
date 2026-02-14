@@ -11,13 +11,15 @@ Heute schauen wir uns an, wie wir **PHP zusammen mit Apache ([apache.org](https:
 
 ### Warum Apache und nicht Nginx?
 
-Wenn du dein Projekt bei einem klassischen Shared Hoster (wie Strato, IONOS oder All-In-One) hostest, begegnest du fast immer einem Apache-Webserver (oder dem Apache-kompatiblen LiteSpeed). Nginx ist zwar extrem performant und beliebt bei VPS- oder Cloud-Setups, aber im Massenmarkt des Webhostings führt an Apache kein Weg vorbei.
+Wenn du dein Projekt bei einem klassischen Shared Hoster (wie Strato, IONOS oder [SGWebservice](https://www.sgwebservice.de/)) hostest, begegnest du fast immer einem Apache-Webserver (oder dem Apache-kompatiblen LiteSpeed). Nginx ist zwar extrem performant und beliebt bei VPS- oder Cloud-Setups, aber im Massenmarkt des Webhostings führt an Apache kein Weg vorbei.
 
-Ein Blick auf die aktuellen Statistiken (Quelle: [W3Techs](https://w3techs.com/technologies/cross/programming_language/web_server), Stand Februar 2026) unterstreicht das:
+Ein Blick auf die aktuellen Statistiken für Deutschland (Quelle: [WMTips](https://www.wmtips.com/technologies/web-servers/country/de/), Stand Februar 2026) unterstreicht das:
 
-*   **95,5&nbsp;%** aller PHP-Websites nutzen **Apache**.
-*   **99,1&nbsp;%** nutzen **LiteSpeed** (welches `.htaccess` und Apache-Konfigurationen versteht).
-*   **88,2&nbsp;%** nutzen Nginx (oft jedoch nur als Reverse Proxy *vor* einem Apache).
+*   **58,6&nbsp;%** Apache
+*   **36,9&nbsp;%** Nginx
+*   **3,1&nbsp;%** LiteSpeed Web Server
+*   **1,4&nbsp;%** Microsoft IIS
+*   **1,1&nbsp;%** Caddy
 
 Für dich als Entwickler bedeutet das: Wenn du lokal mit Apache entwickelst, ist deine Umgebung viel näher an dem, was dich später beim Deployment erwartet. Besonders die mächtigen `.htaccess`-Dateien funktionieren hier "out-of-the-box".
 
