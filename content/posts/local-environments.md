@@ -82,4 +82,8 @@ Die klassischen Wege wie **PHP direkt auf dem Rechner** oder **XAMPP** haben uns
 
 Mit **Docker** geht es einen Schritt weiter: isolierte, saubere Umgebungen, schnelle Wechsel zwischen PHP-Versionen und ein Blick auf moderne Entwicklungs-Workflows. Besonders für Einsteiger lohnt es sich, jetzt schon einmal hineinzuschnuppern, denn die Kenntnisse zahlen sich später bei größeren Projekten aus.
 
-In zukünftigen Posts werden wir noch tiefer in Docker einsteigen, zusätzliche praktische Tipps geben und zeigen, wie man auch komplexere PHP-Umgebungen elegant aufsetzt. Bleib gespannt!
+In zukünftigen Posts werden wir noch tiefer in Docker einsteigen, zusätzliche praktische Tipps geben und zeigen, wie man auch komplexere PHP-Umgebungen elegant aufsetzt.
+
+*   **Teil 2: [PHP mit Apache im Docker Container]({{< ref "php-apache-docker.md" >}})**
+
+Bleib gespannt!
