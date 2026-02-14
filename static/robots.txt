@@ -1,3 +1,38 @@
-user-agent: *
+# Internet Archive
+User-agent: ia_archiver
+Allow: /
+
+User-agent: archive.org_bot
+Allow: /
+
+# Google Search
+User-agent: Googlebot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Ecosia
+User-agent: Ecosia
+Allow: /
+
+# AI Bots
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Alle anderen sperren
+User-agent: *
+Disallow: /
 
 Sitemap: https://www.webdevmentor.info/sitemap.xml
