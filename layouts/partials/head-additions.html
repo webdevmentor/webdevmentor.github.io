@@ -1,2 +1,133 @@
 <meta name="theme-color" content="#393E46">
 <link rel="stylesheet" href="https://static.webdevmentor.info/css/custom.css">
+{{ if .IsHome }}
+<script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@graph":[
+        {
+          "@type":"WebSite",
+          "@id":"https://www.webdevmentor.info/#website",
+          "url":"https://www.webdevmentor.info",
+          "name":"WebDevMentor",
+          "description":"{{ .Site.Params.description }}",
+          "inLanguage":"de",
+          "publisher":{
+            "@id":"https://www.webdevmentor.info/#person"
+          },
+          "mainEntityOfPage":{
+            "@type":"WebPage",
+            "@id":"https://www.webdevmentor.info/"
+          }
+        },
+        {
+          "@type":"Person",
+          "@id":"https://www.webdevmentor.info/#person",
+          "name":"Steffen Grahl",
+          "alternateName":"WebDevMentor",
+          "url":"https://steffengrahl.de",
+          "sameAs":[
+            "https://www.linkedin.com/in/steffengrahl",
+            "https://github.com/steffengrahl",
+            "https://dev.to/steffengrahl"
+          ],
+          "image":"https://steffengrahl.de/images/steffen_grahl.jpg",
+          "jobTitle":"Senior Web Developer",
+          "knowsAbout":[
+            "PHP",
+            "JavaScript",
+            "Softwarearchitektur",
+            "Clean Code"
+          ]
+        },
+        {
+          "@type":"Blog",
+          "@id":"https://www.webdevmentor.info/#blog",
+          "url":"https://www.webdevmentor.info",
+          "name":"WebDevMentor Blog",
+          "isPartOf":{
+            "@id":"https://www.webdevmentor.info/#website"
+          },
+          "publisher":{
+            "@id":"https://www.webdevmentor.info/#person"
+          }
+        },
+        {
+          "@type":"ItemList",
+          "name":"Neueste Artikel",
+          "itemListElement":[
+              {{- $pages := first 5 (sort (where site.RegularPages "Section" "posts") "Date" "desc") -}}
+              {{- range $index, $page := $pages }}
+              {
+                "@type":"ListItem",
+                "position": {{ add $index 1 }},
+                "url": "{{ $page.Permalink }}"
+              }{{ if lt (add $index 1) (len $pages) }},{{ end }}
+              {{- end }}
+          ]
+        }
+      ]
+    }
+</script>
+{{ end }}
+
+{{ if and .IsPage (eq .Section "posts") }}
+<script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@graph":[
+            {
+                "@type":"BlogPosting",
+                "@id":"{{ .Permalink }}#article",
+                "mainEntityOfPage":{
+                    "@type":"WebPage",
+                    "@id":"{{ .Permalink }}"
+                },
+                "headline":"{{ .Title }}",
+                "description":"{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}",
+                "inLanguage":"de",
+                "datePublished":"{{ .Date.Format "2006-01-02" }}",
+                "dateModified":"{{ .Lastmod.Format "2006-01-02" }}",
+                "author":{
+                    "@id":"https://www.webdevmentor.info/#person"
+                },
+                "publisher":{
+                    "@id":"https://www.webdevmentor.info/#person"
+                },
+                "isPartOf":{
+                    "@id":"https://www.webdevmentor.info/#blog"
+                }{{ with .Params.image }},
+                "image":{
+                    "@type":"ImageObject",
+                    "url":"{{ . | absURL }}"
+                }{{ end }},
+                "wordCount":"{{ .WordCount }}"
+            },
+            {
+                "@type":"BreadcrumbList",
+                "@id":"{{ .Permalink }}#breadcrumb",
+                "itemListElement":[
+                    {
+                        "@type":"ListItem",
+                        "position":1,
+                        "name":"Startseite",
+                        "item":"https://www.webdevmentor.info/"
+                    },
+                    {
+                        "@type":"ListItem",
+                        "position":2,
+                        "name":"Blog",
+                        "item":"https://www.webdevmentor.info/posts/"
+                    },
+                    {
+                        "@type":"ListItem",
+                        "position":3,
+                        "name":"{{ .Title }}",
+                        "item":"{{ .Permalink }}"
+                    }
+                ]
+            }
+        ]
+    }
+</script>
+{{ end }}
