@@ -21,7 +21,7 @@ Wer etwas experimentierfreudiger ist, kann PHP auch **in einem Docker-Container 
 
 ### Docker auf MacOS und Linux installieren
 
-Die Installation von Docker auf MacOS oder Linux ist inzwischen recht unkompliziert. Am besten schaut man direkt in die [offizielle Dokumentation](https://docs.docker.com/get-docker/). Kurz zusammengefasst geht man in drei Schritten vor: Docker herunterladen, installieren und den Dienst starten. Danach kann man sofort Container starten, Images ziehen und loslegen. Windows lassen wir bewusst außen vor – Long live Unix! 🐧
+Die Installation von Docker auf MacOS oder Linux ist inzwischen recht unkompliziert. Am besten schaut man direkt in die [offizielle Dokumentation](https://docs.docker.com/get-docker/). Kurz zusammengefasst geht man in drei Schritten vor: Docker herunterladen, installieren und den Dienst starten. Danach kann man sofort Container starten, Images ziehen und loslegen.
 
 Hier ist ein Beispiel, wie man einen **PHP-Container starten** kann, um direkt im aktuellen Projekt zu arbeiten:
 
