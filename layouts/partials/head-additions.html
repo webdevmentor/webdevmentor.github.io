@@ -70,3 +70,64 @@
     }
 </script>
 {{ end }}
+
+{{ if and .IsPage (eq .Section "posts") }}
+<script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@graph":[
+            {
+                "@type":"BlogPosting",
+                "@id":"{{ .Permalink }}#article",
+                "mainEntityOfPage":{
+                    "@type":"WebPage",
+                    "@id":"{{ .Permalink }}"
+                },
+                "headline":"{{ .Title }}",
+                "description":"{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}",
+                "inLanguage":"de",
+                "datePublished":"{{ .Date.Format "2006-01-02" }}",
+                "dateModified":"{{ .Lastmod.Format "2006-01-02" }}",
+                "author":{
+                    "@id":"https://www.webdevmentor.info/#person"
+                },
+                "publisher":{
+                    "@id":"https://www.webdevmentor.info/#person"
+                },
+                "isPartOf":{
+                    "@id":"https://www.webdevmentor.info/#blog"
+                }{{ with .Params.image }},
+                "image":{
+                    "@type":"ImageObject",
+                    "url":"{{ . | absURL }}"
+                }{{ end }},
+                "wordCount":"{{ .WordCount }}"
+            },
+            {
+                "@type":"BreadcrumbList",
+                "@id":"{{ .Permalink }}#breadcrumb",
+                "itemListElement":[
+                    {
+                        "@type":"ListItem",
+                        "position":1,
+                        "name":"Startseite",
+                        "item":"https://www.webdevmentor.info/"
+                    },
+                    {
+                        "@type":"ListItem",
+                        "position":2,
+                        "name":"Blog",
+                        "item":"https://www.webdevmentor.info/posts/"
+                    },
+                    {
+                        "@type":"ListItem",
+                        "position":3,
+                        "name":"{{ .Title }}",
+                        "item":"{{ .Permalink }}"
+                    }
+                ]
+            }
+        ]
+    }
+</script>
+{{ end }}
