@@ -1,2 +1,72 @@
 <meta name="theme-color" content="#393E46">
 <link rel="stylesheet" href="https://static.webdevmentor.info/css/custom.css">
+{{ if .IsHome }}
+<script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@graph":[
+        {
+          "@type":"WebSite",
+          "@id":"https://www.webdevmentor.info/#website",
+          "url":"https://www.webdevmentor.info",
+          "name":"WebDevMentor",
+          "description":"{{ .Site.Params.description }}",
+          "inLanguage":"de",
+          "publisher":{
+            "@id":"https://www.webdevmentor.info/#person"
+          },
+          "mainEntityOfPage":{
+            "@type":"WebPage",
+            "@id":"https://www.webdevmentor.info/"
+          }
+        },
+        {
+          "@type":"Person",
+          "@id":"https://www.webdevmentor.info/#person",
+          "name":"Steffen Grahl",
+          "alternateName":"WebDevMentor",
+          "url":"https://steffengrahl.de",
+          "sameAs":[
+            "https://www.linkedin.com/in/steffengrahl",
+            "https://github.com/steffengrahl",
+            "https://dev.to/steffengrahl"
+          ],
+          "image":"https://steffengrahl.de/images/steffen_grahl.jpg",
+          "jobTitle":"Senior Web Developer",
+          "knowsAbout":[
+            "PHP",
+            "JavaScript",
+            "Softwarearchitektur",
+            "Clean Code"
+          ]
+        },
+        {
+          "@type":"Blog",
+          "@id":"https://www.webdevmentor.info/#blog",
+          "url":"https://www.webdevmentor.info",
+          "name":"WebDevMentor Blog",
+          "isPartOf":{
+            "@id":"https://www.webdevmentor.info/#website"
+          },
+          "publisher":{
+            "@id":"https://www.webdevmentor.info/#person"
+          }
+        },
+        {
+          "@type":"ItemList",
+          "name":"Neueste Artikel",
+          "itemListElement":[
+              {{- $pages := first 5 (sort (where site.RegularPages "Section" "posts") "Date" "desc") -}}
+              {{- range $index, $page := $pages }}
+              {
+                "@type":"ListItem",
+                "position": {{ add $index 1 }},
+                "url": "{{ $page.Permalink }}"
+              }{{ if lt (add $index 1) (len $pages) }},{{ end }}
+              {{- end }}
+          ]
+        }
+      ]
+    }
+</script>
+{{ end }}

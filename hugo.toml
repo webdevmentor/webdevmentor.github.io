@@ -2,6 +2,8 @@ baseURL = 'https://www.webdevmentor.info/'
 languageCode = 'de-de'
 title = 'WebDevMentor'
 theme = 'ananke'
+[params]
+    description = 'Lerne Webentwicklung mit Fokus auf PHP, Docker und modernen Workflows. Mentorings und Tipps für Einsteiger und Fortgeschrittene.'
 [sitemap]
     changeFreq = 'monthly'
 enableRobotsTXT = false
