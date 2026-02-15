@@ -1,6 +1,6 @@
 ---
 title: "PHP & Apache mit Docker: Die Umgebung der Shared Hoster"
-date: 2026-02-14
+date: '2026-02-14T15:42:00+01:00'
 draft: false
 tags: ["PHP", "Apache", "Docker", "Shared Hosting", "Entwicklungsumgebung"]
 ---

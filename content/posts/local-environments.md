@@ -1,6 +1,6 @@
 ---
 title: "Lokale Entwicklungsumgebungen für PHP: Einfach starten"
-date: 2026-02-08
+date: '2026-02-08T16:28:00+01:00'
 draft: false
 tags: ["PHP", "Docker", "XAMPP", "lokale Entwicklungsumgebung"]
 ---
