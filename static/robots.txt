@@ -1,12 +1,30 @@
+# Google Hauptcrawler (Mobile First Index)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Smartphone
+Allow: /
+
+# Google Bilder (optional, aber sinnvoll)
+User-agent: Googlebot-Image
+Allow: /
+
+# Google News (nur falls relevant)
+User-agent: Googlebot-News
+Allow: /
+
+# Ads Landingpage Check (nur falls Ads laufen)
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
 # Internet Archive
 User-agent: ia_archiver
 Allow: /
 
 User-agent: archive.org_bot
-Allow: /
-
-# Google Search
-User-agent: Googlebot
 Allow: /
 
 # Apple
