@@ -153,6 +153,12 @@ image: mysql:8.4
 
 Außerdem müssen die Umgebungsvariablen von `MARIADB_` auf `MYSQL_` angepasst werden.
 
+## Dateien aus dem Artikel
+
+Du möchtest die Entwicklungsumgebung direkt ausprobieren? Alle benötigten Dateien aus diesem Artikel findest du als Gist:
+
+[PHP Apache MariaDB Development Environment with Docker Compose auf GitHub.com](https://gist.github.com/webdevmentor/b77d394f064f1ecc7c1ebaa5d9c6cb63)
+
 ## Fazit
 
 Mit wenigen zusätzlichen Zeilen ist aus unserem einzelnen PHP-Container eine vollständige Entwicklungsumgebung geworden. Docker Compose startet Webserver und Datenbank gemeinsam, Docker Volumes sorgen dafür, dass unsere Daten dauerhaft erhalten bleiben, und über das Dockerfile können wir unser PHP-Image an die Anforderungen unseres Projekts anpassen.
