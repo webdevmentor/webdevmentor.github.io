@@ -75,3 +75,5 @@ Ein großer Vorteil von Docker ist, dass du die PHP-Version deines Containers ex
 Apache ist vielleicht nicht der "hipste" Webserver da draußen, aber er ist das Rückgrat des PHP-Webs. Mit Docker kannst du diese klassische Umgebung innerhalb von Sekunden nachbauen, ohne dein lokales System mit Apache-Installationen zu belasten.
 
 In den nächsten Schritten werden wir uns anschauen, wie wir Datenbanken (wie MySQL) hinzufügen, um eine komplette lokale Entwicklungsumgebung zu schaffen. Bleib dran!
+
+*   **Teil 3: [Docker für PHP, Apache und MariaDB]({{< ref "php-apache-mysql-docker.md" >}})**
