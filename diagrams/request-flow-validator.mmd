@@ -1,0 +1,15 @@
+flowchart TD
+    A[POST Request]
+    B[Request DTO]
+    C[Validator]
+    D[weitere Verarbeitung]
+
+    A --> B
+    B --> C
+    C --> D
+
+    classDef box fill:#E0E0E0,stroke-width:0px,color:#393E46;
+
+    class A,B,C,D box;
+
+    linkStyle default stroke:#357edd,stroke-width:2px;

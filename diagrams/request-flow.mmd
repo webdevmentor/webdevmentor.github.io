@@ -1,0 +1,18 @@
+flowchart TD
+    A[POST Request]
+    B["$_POST"]
+    C[Request DTO]
+    D[weitere Verarbeitung]
+
+    A --> B
+    B --> C
+    C --> D
+
+    style A fill:#E0E0E0,color:#393E46,stroke-width:0
+    style B fill:#E0E0E0,color:#393E46,stroke-width:0
+    style C fill:#E0E0E0,color:#393E46,stroke-width:0
+    style D fill:#E0E0E0,color:#393E46,stroke-width:0
+
+    linkStyle 0 stroke-width:2px,stroke:#357edd
+    linkStyle 1 stroke-width:2px,stroke:#357edd
+    linkStyle 2 stroke-width:2px,stroke:#357edd
