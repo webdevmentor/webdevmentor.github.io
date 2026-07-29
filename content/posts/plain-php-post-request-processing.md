@@ -54,7 +54,7 @@ Das Request DTO kennt dabei ausschließlich die Struktur der eingehenden Daten. 
 
 Der Ablauf sieht vereinfacht so aus:
 
-<img src="static/images/request-flow.svg?qb=1234" style="max-height: 320px;">
+<img src="/images/request-flow.svg?qb=1234" style="max-height: 320px;">
 
 Im Beispielprojekt wird ein Gästebuch-Eintrag verarbeitet. Deshalb heißt die konkrete Klasse `GuestbookEntryRequest`. Der Name beschreibt den Anwendungsfall des Beispiels, während die Aufgabe der Klasse weiterhin die eines allgemeinen Request DTOs bleibt.
 
@@ -160,7 +160,7 @@ Der Validator kennt das Request DTO und überprüft ausschließlich, ob die enth
 
 Der Ablauf erweitert sich damit:
 
-<img src="static/images/request-flow-validator.svg?qb=14" style="max-height:320px;">
+<img src="/images/request-flow-validator.svg?qb=14" style="max-height:320px;">
 
 Im Beispielprojekt heißt die konkrete Klasse `GuestbookEntryValidator`. Auch hier verwenden wir im Artikel weiterhin den allgemeinen Begriff **Validator**, da die Aufgabe unabhängig vom Gästebuch-Beispiel gleich bleibt.
 
@@ -258,7 +258,7 @@ Genau für diese Übersetzung ist der **Mapper** zuständig.
 
 Der Mapper verbindet zwei unterschiedliche Welten:
 
-<img src="static/images/request-dto-to-domain-model.svg?qb=ß090938928" style="max-height:200px;">
+<img src="/images/request-dto-to-domain-model.svg?qb=ß090938928" style="max-height:200px;">
 
 Dabei kopiert ein Mapper nicht einfach nur Werte von einem Objekt in ein anderes. Er kann auch Anpassungen durchführen, die für das Domain-Model sinnvoll sind.
 
